@@ -22,7 +22,7 @@ func main() {
 	log.Printf("roles str: %s", *roles)
 
 	mux := http.NewServeMux()
-	mux.HandleFunc("/default/api/operate/sandbox", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("/api/operate/sandbox", func(w http.ResponseWriter, r *http.Request) {
 		appName := r.URL.Query().Get("appName")
 		for _, role := range strings.Split(*roles, ",") {
 
